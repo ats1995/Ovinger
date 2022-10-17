@@ -1,9 +1,9 @@
 from cmath import pi
 from math import sqrt
-import numpy
+import numpy as np
 
 def euk_disk(x, y):
-    return(numpy.sqrt(x**2+y**2))
+    return(np.sqrt(x**2+y**2))
 
 def circ_area(r):
     return(pi*r*r)

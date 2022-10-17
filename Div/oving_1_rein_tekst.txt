@@ -1,0 +1,53 @@
+
+2
+DAT120 øving 8: Dictionaries, klasser og 
+objekter 
+Læringsmål 
+Du skal lære å bruke dictionaries. Du skal lære hvordan å skrive en egen klasse. Du skal lære hvordan 
+å bruke den egendefinerte klassen. 
+Oppgaver 
+Oppgaven går ut på å lage et enkelt register over land. 
+a) Skriv en klasse for land. Et land har et navn, en befolkning og et areal. Befolkning og areal 
+skal ha default-verdier som sier at de ikke er satt enda. Navn skal ikke ha default-verdi. 
+b) Skriv en __str__ metode for klassen Land. Denne metoden skal returnere en streng som 
+inneholder navn, befolkning og areal til landet. 
+c) Skriv en metode for klassen Land som regner ut og returnerer befolkningstettheten til landet. 
+Befolkningstetthet er befolkning delt på areal. 
+d) Skriv en funksjon som tar inn to land, sjekker hvilket som har høyest befolkning, og 
+returnerer landet som har høyest befolkning av de to. 
+e) Les inn CSV-fila befolkning_tabell_csv.txt. Lag et Land-objekt for hver linje i fila, med navn og 
+befolkning gitt av fila, men hvor arealet ikke er satt enda (bruk default verdi). Legg alle 
+landene i et dictionary med navn som nøkkel og Land-objektet som verdi 
+f) Les inn CSV-fila areal_tabell_csv.txt. For hver linje sjekk om du finner navnet på landet i 
+dictionariet fra forrige deloppgave. Hvis du finner navnet, sett arealet til Land-objektet lik 
+arealet fra denne fila. Hvis du ikke finner landet i dictionariet, skriv ut navnet på landet og at 
+du ikke finner det. 
+g) Skriv ut alle landene som har både befolkning og areal. Gå gjennom dictionariet og skriv ut 
+alle verdiene (objekter av klassen land) hvor både befolkning og areal er satt. Skriv også ut 
+befolkningstetthet for landene. Er det land som mangler areal, skriv ut at dette landet ikke 
+har satt areal. 
+h) Finn hvilket land som har høyest befolkningstetthet. Du kan gjøre dette gjennom å gå 
+gjennom alle landene. Sjekk først at landet har både befolkning og areal. Hvis det mangler 
+minst en av de to, hopp over det landet. Lag variabler for foreløpig høyeste 
+befolkningstetthet og landet som har denne befolkningstettheten. For hvert land sjekker du 
+om dette landet har høyere befolkningstetthet enn det foreløpig høyeste. Hvis 
+befolkningstettheten er høyere, erstatt både maks befolkningstetthet og land-referansen 
+med dette landet sine tall. 
+i) Frivillig: Skriv ut landene i sortert rekkefølge, tilsvarende oppgave g. Sorter landene på navn. 
+Du kan hente ut nøklene i et dictionary som en mengde med metodekallet dictionary.keys(). 
+Deretter kan du lage ei liste av disse verdiene med liste-konstruktøren list(), og send 
+mengden med nøkler som parameter til denne. Denne lista kan deretter sorteres med 
+metodekallet list.sort(). Metoden sort er en rein mutator som endrer lista. Til slutt kan du gå 
+gjennom den nå sorterte lista og bruke hvert element som nøkkel inn i dictionariet. 
+j) Frivillig, datarensing: Det er land som ikke matcher som burde matche. Finn ut hvorfor og 
+skriv koden slik at du får matchet så mange land som mulig fra de to filene. For de som skal 
+jobbe med Data Science eller Computational Engineering er det ofte en stor del av jobben å 
+bruke datafiler som ikke passer helt sammen til å løse en oppgave. 
+k) Frivillig, avansert: Endre klassen Land slik at den i tillegg kan lagre historiske data om 
+befolkningen i landet. Legg til egenskapene liste_aarstall og liste_befolkning. Disse skal 
+inneholde årstall og befolkning for tidligere år. Les inn fila 
+«befolkning_tabell_historisk_csv.txt» og legg inn de historiske dataene fra denne fila i Land-
+objektene. Plott befolkningen for noen land. Finn landet som har hatt høyest 
+befolkningsvekst i prosent mellom 2017 og 2020. 
+ 
+Datakilde for CSV-filene: Wikipedia. 

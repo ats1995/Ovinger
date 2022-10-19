@@ -29,7 +29,7 @@ with open("Uke_6/tidevannsdata_csv.txt", 'r') as csv_file:
 np_ret1 = np.array(retning1)
 np_ret2 = np.array(retning2)
 # Oppg: d
-tot_strom = np.array(euk_disk(np_ret1,np_ret2)) # NOT WORKING???
+tot_strom = np.array(euk_disk(np_ret1,np_ret2))
 
 # Oppg: e
 plt.subplot(2,1,1)

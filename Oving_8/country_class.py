@@ -5,6 +5,9 @@
 # Task b:
 # Skriv en __str__ metode for klassen Land. Denne metoden skal returnere en streng som
 # inneholder navn, befolkning og areal til landet.
+# Task c:
+# Skriv en metode for klassen Land som regner ut og returnerer befolkningstettheten til landet.
+# Befolkningstetthet er befolkning delt på areal.
 
 class Country:
     def __init__(self, c_name: str, population = None, area = None):
@@ -21,6 +24,10 @@ class Country:
            ar = ", Area: " + str(self.area) + "km^2"
         return f"Name: {self.c_name}{pop}{ar}"
     
+    def population_density(self):
+        return self.population/self.area
+    
 if __name__ == "__main__":
     norway = Country("Norway", 7000000, 1500)
     print(norway)
+    print(f"{norway.population_density()}")

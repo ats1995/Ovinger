@@ -19,9 +19,9 @@ class Country:
         pop = ""
         ar = ""
         if self.population:
-           pop = ", Population: " + str(self.population)
+           pop = f", Population: {str(self.population)}"
         if self.area:
-           ar = ", Area: " + str(self.area) + "km^2"
+           ar = f", Area: {str(self.area)} km^2"
         return f"Name: {self.c_name}{pop}{ar}"
     
     def population_density(self):
@@ -30,4 +30,4 @@ class Country:
 if __name__ == "__main__":
     norway = Country("Norway", 7000000, 1500)
     print(norway)
-    print(f"{norway.population_density()}")
+#    print(f"{norway.population_density()}")

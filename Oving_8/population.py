@@ -1,6 +1,5 @@
-from encodings import utf_8
 from country_class import Country
-#from highest_population import *
+from highest_population import highest_population
 
 countries = dict()
 with open("Oving_8/befolkning_tabell_csv.txt", encoding="UTF-8") as file:
@@ -8,9 +7,7 @@ with open("Oving_8/befolkning_tabell_csv.txt", encoding="UTF-8") as file:
         line = line.split(";")
         countries[line[0]] = Country(line[0], line[1])
 
-#print(f"{countries[])
 for i in countries:
-#    print(f"{i} - {countries[i]}")
     print(f"{countries[i].c_name} - {countries[i].population}")
 
 print(countries["Malta"])
@@ -27,16 +24,16 @@ with open("Oving_8/areal_tabell_csv.txt", encoding="UTF-8") as file:
 
 # Task g:
 max_ppc = 0
-max = "Malta"
+max_c = "Malta"
 for c in countries:
     if countries[c].population and countries[c].area:
         print(f"{countries[c]}")
         ppc = int(countries[c].population)/int(countries[c].area)
         print(f"Denisty: {ppc} persons/km^2")
         if ppc > max_ppc:
-            max = countries[c].c_name
+            max_c = countries[c].c_name
         #print(f"Denisty: {int(countries[c].population)/int(countries[c].area)} persons/km^2")
     elif not countries[c].area:
         print(f"{countries[c].c_name} does not have area defined")
 
-print(f"Max density: {max}")
+print(f"Max density: {max_c}")

@@ -1,8 +1,6 @@
 # Eksempel (?) fra forelesning
 from unittest import result
 
-from sympy import false, true
-
 
 class flervalgsporsmal:
     def __init__(self, tekst, alternativer, korrekt_alternativ):
@@ -18,9 +16,9 @@ class flervalgsporsmal:
     
     def sjekk_svar(self, bruker_svar):
         if bruker_svar == self.korrekt_alternativ:
-            return true
+            return True
         else:
-            return false
+            return False
 
 
 if __name__ == "__main__":
